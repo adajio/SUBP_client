@@ -1,0 +1,608 @@
+/*!*****************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/client/css/notion.css ***!
+  \*****************************************************************************/
+/* ==================================================================== */
+/* Hover Feedback */
+/* ==================================================================== */
+
+.notion-link {
+	transition: 100ms ease-in;
+}
+
+.notion-link:hover {
+	color: #eb5757 !important; /* Front red color. */
+}
+.notion-link-ai-version {
+	transition: 100ms ease-in;
+}
+.notion-link-ai-version:hover {
+	color: #ca59ff !important; /* AI Version purple color. */
+}
+
+.notion-ai-icon {
+	transition: 100ms ease-in;
+}
+
+.notion-ai-icon:hover {
+	filter: brightness(1.3);
+}
+
+.notion-mobile-tapping {
+	opacity: 0.6;
+}
+
+.notion-reminder.notion-enable-hover:hover {
+	text-decoration: underline;
+}
+
+.notion-token-remove-button:hover {
+	opacity: 0.8;
+}
+
+.notion-notion-external-object,
+.notion-page-mention-token {
+	box-shadow: 0 0 0 3px rgba(148, 148, 148, 0);
+}
+
+.notion-page-mention-token.notion-enable-hover:hover,
+.notion-external-object-token.notion-enable-hover:hover {
+	cursor: pointer !important;
+	background: rgba(148, 148, 148, 0.15);
+	box-shadow: 0 0 0 3px rgba(148, 148, 148, 0.15);
+	border-radius: 1px;
+}
+
+/* required to correctly highlight the icons within a page/external object
+mention token. */
+.notion-page-mention-token::selection,
+.notion-external-object-token::selection {
+	background: rgba(35, 131, 226, 0.14);
+}
+
+/* ==================================================================== */
+/* Focus Feedback */
+/* ==================================================================== */
+
+.notion-focusable-within:focus-within {
+	box-shadow: rgba(35, 131, 226, 0.57) 0px 0px 0px 1px inset,
+		rgba(35, 131, 226, 0.35) 0px 0px 0px 2px !important;
+}
+
+/* Focusable tokens inside the editor should show focus ring */
+.notion-focusable-token:focus-visible {
+	box-shadow: rgba(35, 131, 226, 0.57) 0px 0px 0px 1px inset,
+		rgba(35, 131, 226, 0.35) 0px 0px 0px 2px !important;
+}
+
+/* ==================================================================== */
+/* Cursor */
+/* ==================================================================== */
+
+.notion-cursor-default {
+	cursor: default;
+}
+
+.notion-cursor-pointer {
+	cursor: pointer;
+}
+
+.notion-sidebar-container,
+.notion-topbar {
+	cursor: default;
+}
+
+.notion-disable-local-cursor .notion-sidebar-container,
+.notion-disable-local-cursor .notion-topbar,
+.notion-disable-local-cursor .notion-cursor-default,
+.notion-disable-local-cursor .notion-cursor-pointer {
+	cursor: inherit;
+}
+
+.notion-disable-webkit-user-select,
+.notion-disable-webkit-user-select * {
+	-webkit-user-select: none;
+}
+
+#notion-app a {
+	cursor: inherit;
+}
+
+/* ==================================================================== */
+/* Animation */
+/* ==================================================================== */
+
+.notion-fadein {
+	animation: fadein ease-in 330ms;
+}
+
+.notion-fadein-fast {
+	animation: fadein ease-in 230ms;
+}
+
+.notion-fadein-slow {
+	animation: fadein ease-in 600ms;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* ==================================================================== */
+/* Overwrite for CodeBlock */
+/* ==================================================================== */
+
+.line-numbers .line-numbers-rows {
+	border-right: none !important;
+}
+
+.line-numbers-rows > span:before {
+	color: #ccc !important;
+}
+
+/* ==================================================================== */
+/* Mobile.
+/* ==================================================================== */
+
+.notion-mobile * {
+	/* Remove the tap highlight */
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* - Disable the bouncy scrolling in OSX. */
+/* - Let the main scroller to handle scrolling */
+html.notion-html,
+body.notion-body,
+#notion-app {
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	background-color: transparent;
+}
+.notion-app-inner {
+	height: 100%;
+}
+
+html.notion-mobile:not(.notion-front-page) div:not([contenteditable]) {
+	-webkit-user-select: none;
+}
+
+html.notion-mobile:not(.notion-front-page)
+	body:not(.notion-disable-webkit-user-select)
+	[contenteditable] {
+	-webkit-user-select: text;
+}
+
+/* Front page allow the scroll bounce */
+html.notion-front-page,
+html.notion-front-page body,
+html.notion-front-page #notion-app {
+	height: initial;
+	overflow-x: initial;
+	overflow-y: initial;
+	background: #fffefc; /* Same as front bg in colors.ts */
+}
+
+/* Disable scroll */
+html.notion-front-page body.disable-scroll {
+	overflow: hidden;
+}
+
+html.notion-front-page .notion-app-inner {
+	height: initial;
+}
+
+/* ==================================================================== */
+/* Contenteditable placeholders.
+/* ==================================================================== */
+
+[contenteditable]:empty:after {
+	content: attr(placeholder);
+}
+
+/* ==================================================================== */
+/* Intercom.
+/* ==================================================================== */
+
+#intercom-container {
+	/* On top of OverlayContainer. */
+	z-index: 1000 !important;
+}
+
+/* ==================================================================== */
+/* Prism.
+/* ==================================================================== */
+
+.token.operator.operator {
+	background: transparent;
+}
+
+/* ==================================================================== */
+/* Box.
+/* ==================================================================== */
+/* testid data attribute is the wrapper for the picker element
+	.be-app-element is the content element*/
+#box-app-container > div {
+	position: absolute;
+	background: rgba(255, 255, 255, 0.5);
+	height: 100vh;
+	width: 100vw;
+	z-index: 1000;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#box-app-container .be-app-element {
+	width: calc(100% - 150px);
+	height: calc(100% - 150px);
+	background: white;
+	box-shadow: 0px 1px 4px rgb(0 0 0 / 25%);
+	max-width: 1150px;
+	max-height: 620px;
+}
+
+/* ==================================================================== */
+/* Loading Spinner.
+/* ==================================================================== */
+
+.loading-spinner {
+	-webkit-animation: rotate 1000ms linear infinite;
+	animation: rotate 1000ms linear infinite;
+	-webkit-transform-origin: center center;
+	transform-origin: center center;
+	width: 1em;
+	height: 1em;
+	opacity: 0.5;
+	display: block;
+	pointer-events: none;
+}
+@-webkit-keyframes rotate {
+	0% {
+		-webkit-transform: rotate(0deg) translateZ(0);
+		transform: rotate(0deg) translateZ(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg) translateZ(0);
+		transform: rotate(360deg) translateZ(0);
+	}
+}
+@keyframes rotate {
+	0% {
+		-webkit-transform: rotate(0deg) translateZ(0);
+		transform: rotate(0deg) translateZ(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg) translateZ(0);
+		transform: rotate(360deg) translateZ(0);
+	}
+}
+
+/* ==================================================================== */
+/* Loading Dots (For AI).
+/* ==================================================================== */
+
+.loading-dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2px;
+	width: 16px;
+	height: 16px;
+}
+
+.loading-dot {
+	width: 4px;
+	height: 4px;
+	opacity: 0.4;
+	background-color: #a782c3;
+	border-radius: 100%;
+	animation-duration: 0.5s;
+	animation-name: dotdance;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.loading-dots .loading-dot:nth-child(1) {
+	animation-delay: 0.2s;
+}
+
+.loading-dots .loading-dot:nth-child(2) {
+	animation-delay: 0.4s;
+}
+
+.loading-dots .loading-dot:nth-child(3) {
+	animation-delay: 0.6s;
+}
+
+@keyframes dotdance {
+	0% {
+		transform: translateY(0);
+		opacity: 0.4;
+	}
+	100% {
+		transform: translateY(2px);
+		opacity: 0.9;
+	}
+}
+
+/* ==================================================================== */
+/* Sync spinner.
+/* ==================================================================== */
+
+.sync-spinner {
+	-webkit-animation: rotate 2500ms linear infinite;
+	animation: rotate 2500ms linear infinite;
+	-webkit-transform-origin: center center;
+	transform-origin: center center;
+	display: block;
+	pointer-events: none;
+}
+
+/* ==================================================================== */
+/* Sidebar loading skeleton shimmer
+/* ==================================================================== */
+
+.notion-shimmer {
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+}
+.notion-shimmer::before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	animation: 1s linear infinite shimmer;
+}
+.notion-light-theme .notion-shimmer::before {
+	background: linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 0.4) 50%,
+		rgba(255, 255, 255, 0) 100%
+	);
+}
+.notion-dark-theme .notion-shimmer::before {
+	background: linear-gradient(
+		90deg,
+		rgba(86, 86, 86, 0) 0%,
+		rgba(86, 86, 86, 0.4) 50%,
+		rgba(86, 86, 86, 0) 100%
+	);
+}
+@keyframes shimmer {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+/* ==================================================================== */
+/* input range
+/* ==================================================================== */
+input[type="range"] {
+	/* Hide the default slider so we can customize */
+	-webkit-appearance: none;
+	background: transparent;
+}
+
+/* Webkit (Chrome, Safari, etc.) */
+input[type="range"]::-webkit-slider-thumb {
+	/* Hide the default slider thumb so we can customize */
+	-webkit-appearance: none;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+	border: 0.5px solid var(--inputRangeThumb--borderColor);
+	height: 14px;
+	width: 14px;
+	border-radius: 50%;
+	background: var(--inputRangeThumb--background);
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -4px;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+	/* Hide the default slider thumb so we can customize */
+	-webkit-appearance: none;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+	border: 0.5px solid var(--inputRangeThumb--border-color);
+	height: 14px;
+	width: 14px;
+	border-radius: 50%;
+	background: var(--inputRangeThumb--background);
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -4px;
+}
+
+/* Webkit (Chrome, Safari, etc.) */
+input[type="range"]::-webkit-slider-runnable-track {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 6px;
+	background: var(--inputRangeTrack--color);
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-track {
+	width: 100%;
+	height: 6px;
+	background: var(--inputRangeTrack--color);
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+/* ==================================================================== */
+/* Front pages.
+/* ==================================================================== */
+
+.notion-quote {
+	position: relative;
+}
+
+.notion-quote::before {
+	content: "“";
+	position: absolute;
+	left: -0.5em;
+	opacity: 0.6;
+}
+
+.notion-quote::after {
+	content: "”";
+	margin-left: 0.1em;
+	opacity: 0.6;
+}
+
+@media only screen and (max-width: 1020px) {
+	.br-desktop {
+		display: none;
+	}
+}
+
+/* ==================================================================== */
+/* Admin.
+/* ==================================================================== */
+
+.pretty-json-container .variable-value > * > * {
+	cursor: pointer !important;
+}
+
+/* ==================================================================== */
+/* Editor force select hack (see Editable.tsx).
+/* ==================================================================== */
+
+.editor-force-select {
+	user-select: auto !important;
+	-webkit-user-select: auto !important;
+	-moz-user-select: auto !important;
+}
+
+/* ==================================================================== */
+/* width-max-content polyfill.
+/* ==================================================================== */
+
+.width-max-content {
+	width: max-content;
+	width: -moz-max-content; /* Firefox/Gecko */
+	width: -webkit-max-content; /* Chrome */
+}
+
+/* ==================================================================== */
+/* hidden.
+/* ==================================================================== */
+
+.hidden {
+	display: none !important;
+}
+
+/* ==================================================================== */
+/* input-hide-arrows.
+/* ==================================================================== */
+
+/* Chrome, Safari, Edge, Opera */
+input.input-hide-arrows::-webkit-outer-spin-button,
+input.input-hide-arrows::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+/* Firefox */
+input[type="number"].input-hide-arrows {
+	-moz-appearance: textfield;
+}
+
+@keyframes leftOrRight {
+	from {
+		left: -50%;
+	}
+	to {
+		left: 250%;
+	}
+}
+
+/* ==================================================================== */
+/* Customizable class utilities.
+ * see shared/cssHelpers.ts
+ *
+ * Use css variables to customize styles for pesudoselectors we
+ * can't easily target from inline style properties.
+ *
+ * Each class defined below should be added to CustomizableClasses in cssHelpers.ts.
+ * For each CSS property, use var(`--${className}--${propertyName}`) as the value.
+ *
+ * We use camelCase names here so they're easier to write in Typescript.
+ * TODO: use something like linaria to automate this shenanigans.
+/* ==================================================================== */
+
+.pseudoAfter:after {
+	color: var(--pseudoAfter--color);
+	content: var(--pseudoAfter--content);
+	border: var(--pseudoAfter--border);
+	width: var(--pseudoAfter--width);
+	height: var(--pseudoAfter--height);
+	display: var(--pseudoAfter--display);
+	background: var(--pseudoAfter--background);
+}
+
+.pseudoBefore:before {
+	color: var(--pseudoBefore--color);
+	content: var(--pseudoBefore--content);
+	border: var(--pseudoBefore--border);
+	width: var(--pseudoBefore--width);
+	height: var(--pseudoBefore--height);
+	display: var(--pseudoBefore--display) !important;
+	background: var(--pseudoBefore--background);
+	font-family: var(--pseudoBefore--fontFamily);
+}
+
+.pseudoHover:hover {
+	background: var(--pseudoHover--background);
+}
+
+.pseudoActive:active {
+	background: var(--pseudoActive--background);
+}
+
+.pseudoSelection ::selection,
+.pseudoSelection::selection {
+	color: var(--pseudoSelection--color);
+	-webkit-text-fill-color: var(--pseudoSelection--WebkitTextFillColor);
+	background: var(--pseudoSelection--background);
+	text-shadow: var(--pseudoSelection--textShadow);
+}
+
+/** Conditional style when self is contentEditable */
+.whenContentEditable[contenteditable="true"] {
+	caret-color: var(--whenContentEditable--caretColor);
+	-webkit-user-modify: var(--whenContentEditable--WebkitUserModify);
+}
+
+/** Conditional style when a content-editable root is editable */
+[data-content-editable-selecting="true"] .whenRootSelecting {
+	display: var(--whenRootSelecting--display) !important;
+}
+
+/** Conditional style when an element is or is inside a focused contentEditable. */
+.whenFocusedEditable[contenteditable="true"]:focus,
+[contenteditable="true"]:focus-within .whenFocusedEditable {
+	-webkit-user-modify: var(--whenFocusedEditable--WebkitUserModify) !important;
+	-webkit-user-select: var(--whenFocusedEditable--WebkitUserSelect) !important;
+	user-select: var(--whenFocusedEditable--userSelect) !important;
+}
+
+/** Conditional styles for :after when we are composing text */
+[data-content-editable-composing="true"] .pseudoAfterWhenComposing:after {
+	display: var(--pseudoAfterWhenComposing--display) !important;
+}

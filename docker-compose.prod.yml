@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  app:
+    labels:
+      - "traefik.enable=true"
+      # services
+      # - "traefik.http.services.chatgpt.loadbalancer.server.port=8080"
+      # middlewares
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      # - "traefik.http.middlewares.auth.basicauth.users=admin:$$apr1$$9pm0g8rc$$dMVD.BSwnUO848pPMi3Tf0"
+      # http
+      - "traefik.http.routers.prodops-client3.entryPoints=web"
+      - "traefik.http.routers.prodops-client3.rule=Host(`prodops-client3.new.dev.su`)"
+      - "traefik.http.routers.prodops-client3.middlewares=redirect-to-https"
+      # https
+      - "traefik.http.routers.prodops-client3-secure.entryPoints=websecure"
+      - "traefik.http.routers.prodops-client3-secure.rule=Host(`prodops-client3.new.dev.su`)"
+      - "traefik.http.routers.prodops-client3-secure.tls=true"
+      - "traefik.http.routers.prodops-client3-secure.tls.certresolver=letsencrypt"
+      # - "traefik.http.routers.chem-secure.middlewares=auth"
+    networks:
+      - public
+
+networks:
+  public:
+    external: true
