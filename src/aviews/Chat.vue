@@ -1,5 +1,5 @@
 <template>
-  <LayoutArahis title="Привет, Арахис!">
-    Привет, Арахис!
-  </LayoutArahis>
+  <LayoutSubpis title="Привет, Субпис!">
+    Привет, Субпис!
+  </LayoutSubpis>
 </template>

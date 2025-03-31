@@ -22,7 +22,7 @@
     </Tree>
 
 
-    <Voix api="arahis/get/area-groups/tree" #="{ areaGroupsNodes }" :key="modelsStore.areaGroupsRefreshKey">
+    <Voix api="subpis/get/area-groups/tree" #="{ areaGroupsNodes }" :key="modelsStore.areaGroupsRefreshKey">
       <Tree @nodeSelect="onAreaGroupsNodeSelect" 
         v-model:selectionKeys="areaGroupsSelection" selectionMode="single"
         v-model:expandedKeys="areaGroupsKeys"
@@ -74,7 +74,7 @@ import GroupRename from './Group/Rename.vue';
 const groupRenameVisible = ref(false);
 
 
-const history = useStorage('arahis.history', [
+const history = useStorage('subpis.history', [
   { label: 'Модель 1', icon: 'mdi mdi-folder-outline', type: 'group' },
   { label: 'Модель 2', icon: 'mdi mdi-folder-outline', type: 'group' },
 ]);
@@ -108,7 +108,7 @@ const groupMenuItems = ref([
   {
     label: 'Создать группу', icon: 'mdi mdi-folder-plus-outline', command: (data) => {
       const gr = modelsStore.currentGroup;
-      voix('/arahis/create/group',{AreaID:gr.AreaID, GroupID:gr.GroupID, Name:'Новая папка'})
+      voix('/subpis/create/group',{AreaID:gr.AreaID, GroupID:gr.GroupID, Name:'Новая папка'})
       .then(modelsStore.areaGroupsRefresh)
     }
   },

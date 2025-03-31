@@ -67,7 +67,7 @@ import SQL from './SQL.vue';
 import LayoutMain from "./views/Layout/Main.vue";
 import LayoutLogin from "./views/Layout/Login.vue";
 import LayoutSite from "./views/Layout/Site.vue";
-import LayoutArahis from "./aviews/Layout/Arahis.vue";
+import LayoutSubpis from "./aviews/Layout/Subpis.vue";
 import AppLayout from "./pviews/App/Layout.vue";
 
 import { createPinia } from 'pinia';
@@ -147,7 +147,7 @@ app.component("Tree", Tree);
 app.component("LayoutMain", LayoutMain);
 app.component("LayoutLogin", LayoutLogin);
 app.component("LayoutSite", LayoutSite);
-app.component("LayoutArahis", LayoutArahis);
+app.component("LayoutSubpis", LayoutSubpis);
 app.component("AppLayout", AppLayout);
 
 app.component("Voix", Voix);

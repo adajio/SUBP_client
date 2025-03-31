@@ -33,7 +33,7 @@ const emit = defineEmits(['update:visible']);
 
 const ok = () => {
   const gr = modelsStore.currentGroup;
-  voix('arahis/rename/group', { AreaID: gr.AreaID, GroupID: gr.GroupID, Name: groupName.value })
+  voix('subpis/rename/group', { AreaID: gr.AreaID, GroupID: gr.GroupID, Name: groupName.value })
     .then(() => {
       modelsStore.areaGroupsRefresh();
       emit('update:visible');

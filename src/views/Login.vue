@@ -34,7 +34,7 @@
           </div>
           <a class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer">Забыли пароль?</a>
         </div>
-        <router-link :to="loginArea.code=='AR'?'/arahis/home':
+        <router-link :to="loginArea.code=='AR'?'/subpis/home':
             loginArea.code=='P3'?'/prodops/home':'/home'">
           <Button label="Вход" icon="mdi mdi-account" class="w-full"></Button>
         </router-link>
@@ -61,7 +61,7 @@ const loginRole = useSessionStorage('role', roles.value[0]);
 const areas = ref([
   { name: 'Разработка продуктов версия 2 (ProdOps-2)', code: 'P2' },
   { name: 'Разработка продуктов версия 3 (ProdOps-3)', code: 'P3' },
-  { name: 'Моделирование процессов (АРАХИС)', code: 'AR' },
+  { name: 'Моделирование процессов (СУБПИС)', code: 'AR' },
 ]);
 const loginArea = useSessionStorage('area', areas.value[0]);
 

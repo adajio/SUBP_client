@@ -1,5 +1,5 @@
 <template>
-  <LayoutArahis title="Редактор скриптов" icon="mdi mdi-script-outline">
+  <LayoutSubpis title="Редактор скриптов" icon="mdi mdi-script-outline">
     <div class="p-4 flex flex-column" style="height:calc(100% - 100px)">
       <h1>Редактор скриптов</h1>
       <Splitter style="flex-grow:1">
@@ -24,7 +24,7 @@
         </SplitterPanel>
       </Splitter>
     </div>
-  </LayoutArahis>
+  </LayoutSubpis>
 </template>
 <script setup>
 import { ref } from 'vue';
@@ -187,7 +187,7 @@ const scripts = [
 const output = ref();
 import {voix} from '../voix';
 const run = () => {
-  voix('arahis/run/script', { code: code.value }).then(({ result }) => {
+  voix('subpis/run/script', { code: code.value }).then(({ result }) => {
     output.value = result;
   }
 

@@ -17,7 +17,7 @@ const self = this;
 
 const createEditorMx = async ({ AreaID, ModelID, id, code, ModelType }) => {
   const res = await (
-    await fetch("http://localhost:8010/api/arahis/models/create/mx", {
+    await fetch("http://localhost:8010/api/subpis/models/create/mx", {
       method: "POST",
       // mode:'no-cors',
       headers: {
@@ -27,7 +27,7 @@ const createEditorMx = async ({ AreaID, ModelID, id, code, ModelType }) => {
     })
   ).json();
   return res;
-  // arahisEdit(res.data, res.modelName);
+  // subpisEdit(res.data, res.modelName);
 }
 
 

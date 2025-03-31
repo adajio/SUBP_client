@@ -1,5 +1,5 @@
 <template>
-  <LayoutArahis title="Репозиторий" icon="mdi mdi-file-cabinet">
+  <LayoutSubpis title="Репозиторий" icon="mdi mdi-file-cabinet">
     <div style="display:flex;justify-content: space-between;">
       <TabMenu :model="leftTabItems" v-model:activeIndex="leftTabIndex"
         :pt="{ icon: { style: 'font-size:20px' }, action: { style: 'padding:13px' } }" />
@@ -30,7 +30,7 @@
       </SplitterPanel>
     </Splitter>
 
-  </LayoutArahis>
+  </LayoutSubpis>
 </template>
 <script setup>
 import { ref } from 'vue';
@@ -47,8 +47,8 @@ const areaGroupsRefresh = ref();
 const leftTabIndex = ref(0);
 // watch(leftTabIndex, () => console.log('19,changed', leftTabIndex.value));
 const leftTabItems = ref([
-  { label: 'Модели и объекты', icon: 'mdi mdi-shape-outline', to: '/arahis/models' },
-  { label: 'Документы', icon: 'mdi mdi-file-outline', to: '/arahis/docs' },
+  { label: 'Модели и объекты', icon: 'mdi mdi-shape-outline', to: '/subpis/models' },
+  { label: 'Документы', icon: 'mdi mdi-file-outline', to: '/subpis/docs' },
 ]);
 
 const rightTabItems = ref([

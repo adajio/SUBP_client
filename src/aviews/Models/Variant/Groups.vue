@@ -7,7 +7,7 @@
     <div class="flex justify-content-between">
       <div class="flex align-items-center">
         <div class="px-2">База данных</div>
-        <Voix api="arahis/get/databases" #="{ databases }" @update="onDatabasesUpdate">
+        <Voix api="subpis/get/databases" #="{ databases }" @update="onDatabasesUpdate">
           <Dropdown v-model="toArea" :options="databases" 
           optionLabel="Name" placeholder="База данных" :pt="{root:{style:'width:400px'}}">
           </Dropdown>
@@ -20,7 +20,7 @@
     </div>
 
     <div style="height:300px;overflow-y: scroll;">
-    <Voix api="arahis/get/groups/tree" :params="{AreaID:toArea.AreaID}" #="{groupsNodes}">
+    <Voix api="subpis/get/groups/tree" :params="{AreaID:toArea.AreaID}" #="{groupsNodes}">
       <Tree 
       selectionMode="single" :value="groupsNodes"
       @nodeSelect="onGroupsSelect"
@@ -71,7 +71,7 @@ const onOk = () => {
     emit('success'); return;
   }
   if(modelsStore.currentModel.ModelID) {
-    voix('arahis/create/model/variant',{
+    voix('subpis/create/model/variant',{
       fromAreaID:modelsStore.currentModel.AreaID,
       fromModelID:modelsStore.currentModel.ModelID,
       toAreaID:toArea.value.AreaID, 
@@ -81,7 +81,7 @@ const onOk = () => {
       emit('success');
     })
   } else if(modelsStore.currentModel.ObjDefID) {
-    voix('arahis/create/objdef/variant',modelsStore.toGroup).
+    voix('subpis/create/objdef/variant',modelsStore.toGroup).
     then(()=>{
       emit('success');
     })

@@ -16,7 +16,7 @@
       </a>
     </div>
     <div class="surface-overlay py-3 px-6 shadow-2 flex align-items-center justify-content-between relative lg:static">
-      <img src="/img/arahis/logo/logo.png" alt="Image" height="50">
+      <img src="/img/subpis/logo/logo.png" alt="Image" height="50">
       <a class="cursor-pointer block lg:hidden text-700"
         v-styleclass="{ selector: '@next', enterClass: 'hidden', leaveToClass: 'hidden', hideOnOutsideClick: true }">
         <i class="pi pi-bars text-4xl"></i>

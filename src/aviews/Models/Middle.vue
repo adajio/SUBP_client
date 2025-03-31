@@ -1,7 +1,7 @@
 <template>
   <!-- <div>inside {{ currentGroup }} </div> -->
   <div style="height:100%;display:flex;flex-direction: column;overflow-y: scroll;">
-  <Voix api="arahis/get/group-model-objects" 
+  <Voix api="subpis/get/group-model-objects" 
     :params="modelsStore.currentGroup" 
     #="{ groupModelObjects }">
     
@@ -23,7 +23,7 @@
             <div v-else-if="d.data.type=='ObjDef'" class="mdi mdi-card-text-outline" style="font-size:20px; color:var(--blue-600);padding:8px;"></div>
             <div style="display:flex;flex-direction: column;">
               <div style="cursor: pointer;">
-                <a v-if="d.data.type=='Model'" target="_blank" :href="'/arahis/editor/id/'+d.data.id">
+                <a v-if="d.data.type=='Model'" target="_blank" :href="'/subpis/editor/id/'+d.data.id">
                   {{ d.data.name }} {{ d.data.Variant?'('+d.data.Variant+')':'' }}
                 </a>
                 <a v-else-if="d.data.type=='ObjDef'">

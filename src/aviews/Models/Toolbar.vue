@@ -58,7 +58,7 @@
     </template>
     <template #end>
       <Button label="Создать модель" rounded  v-tooltip="''"
-      icon="mdi mdi-plus" @click="router.push('/arahis/editor')" :pt="
+      icon="mdi mdi-plus" @click="router.push('/subpis/editor')" :pt="
         {
           root: { style: 'padding:8px 16px;margin:4px' },
           icon: { style: 'font-size:20px' }

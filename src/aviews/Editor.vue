@@ -1,5 +1,5 @@
 <template>
-  <LayoutArahis title="Редактор" icon="mdi mdi-palette-outline" hidden="true">
+  <LayoutSubpis title="Редактор" icon="mdi mdi-palette-outline" hidden="true">
     <div style="display:flex;justify-content: space-between;align-items: center;">
       <div style="display:flex;align-items: baseline;padding:0 20px">
         <h1>{{ title }}</h1>
@@ -60,7 +60,7 @@
       </SplitterPanel>
     </Splitter>
 
-  </LayoutArahis>
+  </LayoutSubpis>
 </template>
 <script setup>
 import { ref } from 'vue';
@@ -87,12 +87,12 @@ const leftMenuItems = ref([
   { label: 'Формат' },
 ]);
 
-const searchVisible = useStorage('arahis.editor.search',false);
-const infoVisible = useStorage('arahis.editor.info',false);
-const reportsVisible = useStorage('arahis.editor.reports',false);
-const verificationVisible = useStorage('arahis.editor.verification',false);
-const paletteVisible = useStorage('arahis.editor.palette',true);
-const cooperationVisible = useStorage('arahis.editor.cooperation',false);
+const searchVisible = useStorage('subpis.editor.search',false);
+const infoVisible = useStorage('subpis.editor.info',false);
+const reportsVisible = useStorage('subpis.editor.reports',false);
+const verificationVisible = useStorage('subpis.editor.verification',false);
+const paletteVisible = useStorage('subpis.editor.palette',true);
+const cooperationVisible = useStorage('subpis.editor.cooperation',false);
 
 
 </script>

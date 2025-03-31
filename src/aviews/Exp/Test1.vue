@@ -1,15 +1,15 @@
 <template>
-  <LayoutArahis title="Тест для voix()">
+  <LayoutSubpis title="Тест для voix()">
     <div class="flex flex-column">
       <div>{{ data }}</div>
       <Button label="Обнови" @click="press"></Button>
     </div>
-  </LayoutArahis>
+  </LayoutSubpis>
 </template>
 <script setup>
 import voix from './voix';
 
-voix.url('http://localhost:8010/api/arahis/');
+voix.url('http://localhost:8010/api/subpis/');
 
 
 const data = voix('models/tree', { AreaID: 2, ModelID: '"Model.2c----4-----u--"' });

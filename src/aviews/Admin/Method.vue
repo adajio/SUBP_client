@@ -22,7 +22,7 @@ const header = ref('Типы моделей');
 const menuItems = ref([
   {
     label: 'Метод', items: [
-      { label: 'Типы моделей',to:'/arahis/admin/method/model-types'},
+      { label: 'Типы моделей',to:'/subpis/admin/method/model-types'},
       { label: 'Типы объектов' },
       { label: 'Символы объектов' },
       { label: 'Типы связей' },

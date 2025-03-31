@@ -1,5 +1,5 @@
 <template>
-<LayoutArahis title="Вики" icon="mdi mdi-wikipedia">
+<LayoutSubpis title="Вики" icon="mdi mdi-wikipedia">
   <Splitter>
     <SplitterPanel :size="20">
       <WikiLeft></WikiLeft>
@@ -12,7 +12,7 @@
   </Splitter>
     
   
-  </LayoutArahis>
+  </LayoutSubpis>
   </template>
 
 <script setup>

@@ -1,5 +1,5 @@
 <template>
-  <LayoutArahis title="Главная" icon="mdi mdi-home-outline">
+  <LayoutSubpis title="Главная" icon="mdi mdi-home-outline">
     <div style="background-image: url(/img/cover/zamok.webp);
     background-position:0 50%;width:100%;padding:150px;">
 
@@ -10,7 +10,7 @@
             <h1>Добро пожаловать, Валентин!</h1>
           </div>
           <div>
-            <Button rounded label="Редактировать модель" @click="router.push('/arahis/editor')"></Button>
+            <Button rounded label="Редактировать модель" @click="router.push('/subpis/editor')"></Button>
           </div>
         </div>
 
@@ -20,7 +20,7 @@
         </div>
 
         <div class="flex justify-content-between align-items-center">
-          <router-link v-for="card in modelTypeCards" :to="'/arahis/editor/new/' + card.ModelType">
+          <router-link v-for="card in modelTypeCards" :to="'/subpis/editor/new/' + card.ModelType">
             <Card style="width: 15em;padding:20px;"
               :pt="{ root: { style: 'background-color: var(' + card.color + ')' } }">
               <template #header>
@@ -41,7 +41,7 @@
         <h2 class="text-white">Избранное</h2>
 
         <div class="grid align-items-center justify-content-between">
-          <router-link v-for="card in favorites" :to="'/arahis/editor/' + card.AreaID + '/' + card.ModelID">
+          <router-link v-for="card in favorites" :to="'/subpis/editor/' + card.AreaID + '/' + card.ModelID">
             <Card style="width: 15em;height:200px;padding:20px;margin:10px"
               :pt="{ root: { style: 'background-color: var(' + card.color + ')' } }">
               <template #title>
@@ -59,8 +59,8 @@
       <div class="bg-gray-900">
         <div class="grid">
           <div class="col-12 md:col-3 flex flex-wrap justify-content-start md:mb-0 mb-3">
-            <img src="/img/arahis/logo/logo.png" alt="footer sections" width="100" height="50" class="mr-3">
-            <div class="text-gray-300 font-bold text-5xl">АРАХИС</div>
+            <img src="/img/subpis/logo/logo.png" alt="footer sections" width="100" height="50" class="mr-3">
+            <div class="text-gray-300 font-bold text-5xl">СУБПИС</div>
           </div>
           <div class="col-12 md:col-3">
             <div class="text-white text-lg mb-4 flex flex-wrap" style="max-width: 290px">ООО "Инфо Индастриз Груп"</div>
@@ -86,7 +86,7 @@
       </div>
 
     </div>
-  </LayoutArahis>
+  </LayoutSubpis>
 </template>
 <script setup>
 import { ref } from 'vue';
@@ -104,7 +104,7 @@ const modelTypeCards = ref([
 //{ name: 'Примеры', icon: 'mdi mdi-airport', color: '--red-300', ModelType:'' },
 
 
-const favorites = useStorage('arahis.favorites', [
+const favorites = useStorage('subpis.favorites', [
   { AreaID: 1, Name: 'EEPC диаграмма', ModelID: 'Model.2c----4-----u--', ModelType: 'MT_EEPC' },
   { AreaID: 2, Name: 'Оргдиаграмма',ModelID: 'Model.2c----4-----u--', ModelType: 'MT_ORG_CHRT' },
   { AreaID: 3, Name: 'Оргдиаграмма',ModelID: 'Model.2c----4-----u--', ModelType: 'MT_ORG_CHRT' },

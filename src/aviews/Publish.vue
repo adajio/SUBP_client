@@ -1,5 +1,5 @@
 <template>
-  <LayoutArahis title="Опубликованное содержимое" icon="mdi mdi-file-cabinet">
+  <LayoutSubpis title="Опубликованное содержимое" icon="mdi mdi-file-cabinet">
     <div style="display:flex;justify-content: space-between;">
       <TabMenu :model="tabGroupItems"></TabMenu>
       <Button text rounded label="Основная база данных" icon="mdi mdi-file-cabinet"
@@ -17,7 +17,7 @@
         <PublishRight></PublishRight>
       </SplitterPanel> -->
     </Splitter>
-  </LayoutArahis>
+  </LayoutSubpis>
 </template>
 <script setup>
 import { ref } from 'vue';

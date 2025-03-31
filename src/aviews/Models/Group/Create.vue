@@ -27,7 +27,7 @@ const groupName = ref()
 
 const onOk = () => {
   console.log(27,{AreaID:props.AreaID, GroupID:props.GroupID,Name:groupName.value});
-  voix('arahis/create/group',{AreaID:props.AreaID,GroupID:props.GroupID, Name:groupName.value}).then(
+  voix('subpis/create/group',{AreaID:props.AreaID,GroupID:props.GroupID, Name:groupName.value}).then(
     (res)=>{
       console.log(30,res);
       modelsStore.areaGroupsRefresh();

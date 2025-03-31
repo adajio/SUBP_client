@@ -1,5 +1,5 @@
 <template>
-  <LayoutArahis title="Сотрудничество" icon="mdi mdi-forum-outline">
+  <LayoutSubpis title="Сотрудничество" icon="mdi mdi-forum-outline">
     <Splitter style="height: calc(100% - 60px)">
       <SplitterPanel :size="20">
         <CooperationLeft></CooperationLeft>
@@ -8,7 +8,7 @@
         <CooperationMiddle></CooperationMiddle>
       </SplitterPanel>
     </Splitter>
-  </LayoutArahis>
+  </LayoutSubpis>
 </template>
 <script setup>
 import CooperationLeft from './Cooperation/Left.vue';

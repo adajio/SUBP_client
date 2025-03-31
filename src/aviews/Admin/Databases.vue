@@ -52,10 +52,10 @@ const checked2 = ref(false);
 const checked3 = ref(false);
 
 const databases = ref([
-  { name: 'Пример базы АРАХИС', with_versions: true, filter: '<Без названия>', language: 'русский', font_format: 'Стандартный', palette: 'Стандартная палитра АРАХИС' },
-  { name: 'ПАО "Индустрия"', with_versions: false, filter: '<Без названия>', language: 'русский', font_format: 'Стандартный', palette: 'Стандартная палитра АРАХИС' },
-  { name: 'Облачная БД АРАХИС', with_versions: true, filter: '<Без названия>', language: 'русский', font_format: 'Стандартный', palette: 'Стандартная палитра АРАХИС' },
-  { name: 'Arahis Cloud Database', with_versions: true, filter: '<Без названия>', language: 'English', font_format: 'Стандартный', palette: 'Стандартная палитра АРАХИС' },
+  { name: 'Пример базы СУБПИС', with_versions: true, filter: '<Без названия>', language: 'русский', font_format: 'Стандартный', palette: 'Стандартная палитра СУБПИС' },
+  { name: 'ПАО "Индустрия"', with_versions: false, filter: '<Без названия>', language: 'русский', font_format: 'Стандартный', palette: 'Стандартная палитра СУБПИС' },
+  { name: 'Облачная БД СУБПИС', with_versions: true, filter: '<Без названия>', language: 'русский', font_format: 'Стандартный', palette: 'Стандартная палитра СУБПИС' },
+  { name: 'SUBPIS Cloud Database', with_versions: true, filter: '<Без названия>', language: 'English', font_format: 'Стандартный', palette: 'Стандартная палитра СУБПИС' },
 ]);
 
 import { FilterMatchMode } from 'primevue/api';

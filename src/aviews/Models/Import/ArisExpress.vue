@@ -4,7 +4,7 @@
   modal header="Импорт модели ARIS (.aml, .xml) или ARIS Express (.adf)" :style="{ width: '50vw' }">
 
 
-    <FileUpload mode="basic" name="file" url="http://localhost:8010/api/arahis/import/ae" accept=".adf,.xml,.aml" :maxFileSize="16000000"
+    <FileUpload mode="basic" name="file" url="http://localhost:8010/api/subpis/import/ae" accept=".adf,.xml,.aml" :maxFileSize="16000000"
       @upload="onUpload" :auto="true" chooseLabel="Выберите файл" />
   </Dialog>
 </template>

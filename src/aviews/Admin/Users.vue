@@ -53,8 +53,8 @@ import { ref } from 'vue';
 
 
 const tabMenuItems = ref([
-  {label:'Пользователи',to:'/arahis/admin/users/users'},
-  {label:'Группы',to:'/arahis/admin/users/groups'},
+  {label:'Пользователи',to:'/subpis/admin/users/users'},
+  {label:'Группы',to:'/subpis/admin/users/groups'},
 ]);
 
 // const userStore = useUserStore();

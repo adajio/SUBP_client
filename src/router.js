@@ -47,126 +47,126 @@ const routes = [
   { path: "/task", component: () => import("./views/Task.vue") },
   { path: "/trash", component: () => import("./views/Trash.vue") },
 
-  { path: "/arahis/home", component: () => import("./aviews/Home.vue") },
+  { path: "/subpis/home", component: () => import("./aviews/Home.vue") },
     {
-    path: "/arahis/cooperation",
+    path: "/subpis/cooperation",
     component: () => import("./aviews/Cooperation.vue"),
   },
   {
-    path: "/arahis/admin",
+    path: "/subpis/admin",
     component: () => import("./aviews/Admin.vue"),
     children: [
       {
-        path: "/arahis/admin/users",
+        path: "/subpis/admin/users",
         component: () => import("./aviews/Admin/Users.vue"),
         children:[
           {
-          path: "/arahis/admin/users/users",
+          path: "/subpis/admin/users/users",
           component: () => import("./aviews/Admin/Users/Users.vue"),
         },
         {
-          path: "/arahis/admin/users/groups",
+          path: "/subpis/admin/users/groups",
           component: () => import("./aviews/Admin/Users/Groups.vue"),
         },
   
         ]
       },
       {
-        path: "/arahis/admin/configs",
+        path: "/subpis/admin/configs",
         component: () => import("./aviews/Admin/Configs.vue"),
       },
 
       {
-        path: "/arahis/admin/publish",
+        path: "/subpis/admin/publish",
         component: () => import("./aviews/Admin/Publish.vue"),
       },
       {
-        path: "/arahis/admin/method",
+        path: "/subpis/admin/method",
         component: () => import("./aviews/Admin/Method.vue"),
         children:[
-          {path: '/arahis/admin/method/model-types',
+          {path: '/subpis/admin/method/model-types',
         component: () => import("./aviews/Admin/Method/ModelTypes.vue"),}
         ]
       },
       {
-        path: "/arahis/admin/databases",
+        path: "/subpis/admin/databases",
         component: () => import("./aviews/Admin/Databases.vue"),
       },
       {
-        path: "/arahis/admin/processes",
+        path: "/subpis/admin/processes",
         component: () => import("./aviews/Admin/Processes.vue"),
       },
       {
-        path: "/arahis/admin/mining",
+        path: "/subpis/admin/mining",
         component: () => import("./aviews/Admin/Mining.vue"),
       },
       {
-        path: "/arahis/admin/imitation",
+        path: "/subpis/admin/imitation",
         component: () => import("./aviews/Admin/Imitation.vue"),
       },
       {
-        path: "/arahis/admin/interface",
+        path: "/subpis/admin/interface",
         component: () => import("./aviews/Admin/Interface.vue"),
       },
       {
-        path: "/arahis/admin/license",
+        path: "/subpis/admin/license",
         component: () => import("./aviews/Admin/License.vue"),
       },
     ],
   },
   {
-    path: "/arahis/favorites",
+    path: "/subpis/favorites",
     component: () => import("./aviews/Favorites.vue"),
   },
-  { path: "/arahis/tasks", component: () => import("./aviews/Tasks.vue") },
-  { path: "/arahis/help", component: () => import("./aviews/Help.vue") },
-  { path: "/arahis/chat", component: () => import("./aviews/Chat.vue") },
+  { path: "/subpis/tasks", component: () => import("./aviews/Tasks.vue") },
+  { path: "/subpis/help", component: () => import("./aviews/Help.vue") },
+  { path: "/subpis/chat", component: () => import("./aviews/Chat.vue") },
   
-  { path: "/arahis/models/code/:code", component: () => import("./aviews/Models.vue"),props:true},
-  { path: "/arahis/models/:id", component: () => import("./aviews/Models.vue"),props:true},
-  { path: "/arahis/models",component: () => import("./aviews/Models.vue"),},
+  { path: "/subpis/models/code/:code", component: () => import("./aviews/Models.vue"),props:true},
+  { path: "/subpis/models/:id", component: () => import("./aviews/Models.vue"),props:true},
+  { path: "/subpis/models",component: () => import("./aviews/Models.vue"),},
 
-  { path: "/arahis/docs/code/:code", component: () => import("./aviews/Docs.vue"),props:true},
-  { path: "/arahis/docs/:id", component: () => import("./aviews/Docs.vue"),props:true},
-  { path: "/arahis/docs", component: () => import("./aviews/Docs.vue"),},
+  { path: "/subpis/docs/code/:code", component: () => import("./aviews/Docs.vue"),props:true},
+  { path: "/subpis/docs/:id", component: () => import("./aviews/Docs.vue"),props:true},
+  { path: "/subpis/docs", component: () => import("./aviews/Docs.vue"),},
   
-  { path: "/arahis/publish/code/:code", component: () => import("./aviews/Publish.vue"),props:true },
-  { path: "/arahis/publish/:id", component: () => import("./aviews/Publish.vue"),props:true },
-  { path: "/arahis/publish", component: () => import("./aviews/Publish.vue") },
+  { path: "/subpis/publish/code/:code", component: () => import("./aviews/Publish.vue"),props:true },
+  { path: "/subpis/publish/:id", component: () => import("./aviews/Publish.vue"),props:true },
+  { path: "/subpis/publish", component: () => import("./aviews/Publish.vue") },
 
 
-  { path: "/arahis/editor/code/:code", component: () => import("./aviews/Editor.vue"),props:true },
-  { path: "/arahis/editor/id/:id", component: () => import("./aviews/Editor.vue"),props:true },
-  { path: "/arahis/editor/new/:modelType", component: () => import("./aviews/Editor.vue"),props:true },
-  { path: "/arahis/editor", component: () => import("./aviews/Editor.vue") },
-  { path: "/arahis/editor/whiteboard", component: () => import("./aviews/Editor.vue") },
+  { path: "/subpis/editor/code/:code", component: () => import("./aviews/Editor.vue"),props:true },
+  { path: "/subpis/editor/id/:id", component: () => import("./aviews/Editor.vue"),props:true },
+  { path: "/subpis/editor/new/:modelType", component: () => import("./aviews/Editor.vue"),props:true },
+  { path: "/subpis/editor", component: () => import("./aviews/Editor.vue") },
+  { path: "/subpis/editor/whiteboard", component: () => import("./aviews/Editor.vue") },
   
-  { path: "/arahis/wiki/code/:code", component: () => import("./aviews/Wiki.vue"), props:true },
-  { path: "/arahis/wiki/:id", component: () => import("./aviews/Wiki.vue"), props:true },
-  { path: "/arahis/wiki", component: () => import("./aviews/Wiki.vue") },
+  { path: "/subpis/wiki/code/:code", component: () => import("./aviews/Wiki.vue"), props:true },
+  { path: "/subpis/wiki/:id", component: () => import("./aviews/Wiki.vue"), props:true },
+  { path: "/subpis/wiki", component: () => import("./aviews/Wiki.vue") },
   {
-    path: "/arahis/script",
+    path: "/subpis/script",
     component: () => import("./aviews/Script.vue"),
   },
 
   {
-    path: "/arahis/exp/test1",
+    path: "/subpis/exp/test1",
     component: () => import("./aviews/Exp/Test1.vue"),
   },
   {
-    path: "/arahis/exp/test2",
+    path: "/subpis/exp/test2",
     component: () => import("./aviews/Exp/Test2.vue"),
   },
   {
-    path: "/arahis/exp/test3",
+    path: "/subpis/exp/test3",
     component: () => import("./aviews/Exp/Test3.vue"),
   },
   {
-    path: "/arahis/exp/test4",
+    path: "/subpis/exp/test4",
     component: () => import("./aviews/Exp/Test4.vue"),
   },
   {
-    path: "/arahis/exp/test5",
+    path: "/subpis/exp/test5",
     component: () => import("./aviews/Exp/Test5.vue"),
   },
 

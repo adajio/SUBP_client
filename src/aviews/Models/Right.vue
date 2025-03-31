@@ -4,7 +4,7 @@
     <h3>
       {{ modelsStore.currentModel?.name }}
     </h3>
-    <Voix api="arahis/get/attrs" :params="{
+    <Voix api="subpis/get/attrs" :params="{
       AreaID:modelsStore.currentModel?.AreaID,
       GroupID:modelsStore.currentModel?.GroupID,
       ModelID:modelsStore.currentModel?.ModelID,
